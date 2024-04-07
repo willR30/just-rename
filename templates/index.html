@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just rename</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" re>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <h1>1: Select all the files you want</h1>
+        <div class="file-input-container">
+
+            <div class="mb-3">
+                <input class="form-control" type="file" id="fileInput" multiple>
+            </div>
+
+
+        </div>
+
+        <div class="key-words-container">
+            <h2>2: Add comma-separated keywords</h2>
+            <h2>example: mi,mama,me,ama</h2>
+            <textarea class="form-control" id="keywordsInput" rows="3"></textarea>
+            <h2>using the keywords, the files will be renamed and downloaded as a .zip file.</h2>
+            <button id="btn-rename" type="button" class="btn btn-primary">3: Rename and Download ZIP</button>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>
